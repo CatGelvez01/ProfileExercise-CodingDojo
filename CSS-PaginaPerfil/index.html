@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio CSS - Página de perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+    <body>
+        <div class="header">
+            <div id="SubHeader">
+                <div id="menu">
+                    <h1 style="padding: 10px;">Profile</h1>
+                    <p style="padding: 10px;">Home</p>
+                    <p style="padding: 10px;"><strong>Profile</strong></p>
+                    <p style="padding: 10px;">Find Connections</p>
+                </div>
+                <button id="singOut" ><strong>Sign Out</strong></button>
+            </div>
+        </div>
+
+        <div class="profile">
+
+            <div class="frameEducation">
+                <div id="frameEd1">
+                    <h3 id="education" style="color: white;">Education</h3>
+                </div>
+            </div>
+
+            <div id="frameEd2">
+                <div id="textEd">
+                        <h3>Coding Dojo - Full Stack Bootcamp</h3>
+                        <p style="font-size: large;">Dec 2019 - March 2020</p>
+                        <p><strong>Black belt</strong> in phyton, MERN and C#</p>
+                        <p>Desarollador | Dinoingeniero | Problem solver</p>
+                        <p>Master of dinoshadows and the internet!</p>
+                </div>
+            </div>
+            
+            <div class="frame1">
+                <div id="frame1-1">
+                    <div id="BackUserImg" style="background-color: white;"></div>
+                    <img id="UserImg" src="Copia de betosaurio1.png">
+                </div>
+            </div>
+
+            <div class="frame2">
+                <div class="Text">
+                    <h3 id="UserName">El Betosaurio</h3>
+               
+                    <div id="frame2-1">
+
+                        <img id="PinImg"src="map-marker.png">
+                        <h4>Colombia</h4>
+                        <p>Desarollador | Dinoingeniero | Problem solver</p>
+                        <p>Master of dinoshadows and the internet!</p>
+               
+                    </div>
+               
+                    <div id="frame2-2">
+                        <img id="WheelImg" src="gear.png">
+                        <button onclick="changeTitle()" id="profile1">Edit profile</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="conections">
+
+                <div class="conectionsRequest">
+
+                    <div id="block1">
+                        <p id="two" style="z-index: 1;">2</p>
+                        <div id="circle1" style="background-color: lightgray;"> </div>
+                    </div>    
+                    <h5 style="color: white; padding-left: 40px;">Conections Requests</h5>
+                
+                </div>
+
+                <div class="conectionRequest2">
+                    
+                    <div id="block2">
+                        <div id="block2-1">
+                            <img style="height: 30px;" src="user-circle.png" alt="">
+                            <p style="padding-left: 10px;">T.Rex</p>
+                        </div>
+
+                        <div id="botonsReq">
+                            
+                            <div onclick="hideBlock2(), removeReq()" id="block2-2">
+                                <div id="circle2" style="background-color: red;"></div>
+                                <p id="x">x</p>
+                            </div>
+
+                            <div onclick="addtoList(), hideBlock2()" id="block2-3">
+                                <div  id="circle3" style="background-color: green;"></div>
+                                <p id="no">?</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div id="block3">
+                        <div id="block3-1">
+                            <img style="height: 30px;" src="user-circle.png" alt="">
+                            <p style="padding-left: 10px;">Brontosaurus</p>
+                        </div>
+
+                        <div id="botonsReq2">
+                            
+                            <div onclick="hideBlock3(), removeReq()" id="block3-2">
+                                <div id="circle4" style="background-color: red;"></div>
+                                <p id="x">x</p>
+                            </div>
+
+                            <div onclick="addtoList(), hideBlock3()" id="block3-3">
+                                <div id="circle5" style="background-color: green;"></div>
+                                <p id="no">?</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="yourRequests">
+
+                    <div id="blockY1">
+                        <p id="Y" style="z-index: 1;">500</p>
+                        <div id="circleY" style="background-color: lightgray;"> </div>
+                    </div>    
+                    <h5 style="color: white; padding-left: 60px;">Your conections</h5>
+                
+                </div>
+
+                <div class="yourRequest2">
+                    
+                    <div id="blockY2">
+                        <div id="blockY2-1">
+                            <img style="height: 30px;" src="user-circle.png" alt="">
+                            <p style="padding-left: 10px;">Velociraptor</p>
+                            <div onclick="hideblockY21(), removelist()" id="block3-2">
+                                <div id="circle4" style="background-color: red;"></div>
+                                <p id="x">x</p>
+                            </div>
+                        </div>
+                        <div id="blockY2-2">
+                            <img style="height: 30px;" src="user-circle.png" alt="">
+                            <p style="padding-left: 10px;">Spinosaurus</p>
+                            <div onclick="hideblockY22(), removelist()" id="block3-2">
+                                <div id="circle4" style="background-color: red;"></div>
+                                <p id="x">x</p>
+                            </div>
+                    
+                        </div>
+                        <div id="blockY2-3">
+                            <img style="height: 30px;" src="user-circle.png" alt="">
+                            <p style="padding-left: 10px;">Stegosaurus</p>
+                            <div onclick="hideblockY23(), removelist()" id="block3-2">
+                                <div id="circle4" style="background-color: red;"></div>
+                                <p id="x">x</p>
+                            </div>
+                        </div>
+                        <div id="blockY2-4">
+                            <img style="height: 30px;" src="user-circle.png" alt="">
+                            <p style="padding-left: 10px;">Triceratops</p>
+                            <div id="block3-2">
+                                <div onclick="hideblockY24(), removelist()" id="block3-2">
+                                    <div id="circle4" style="background-color: red;"></div>
+                                    <p id="x">x</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="yourRequest3">
+                    <a href="https://www.minijuegos.com/juego/dinosaur-game">View More</a> 
+                </div>
+
+
+        </div>
+
+    </body>
+</html>
